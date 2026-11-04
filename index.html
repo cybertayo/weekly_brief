@@ -60,30 +60,34 @@ details.past summary { cursor: pointer; font-weight: 500; }
 <!-- LATEST-ISSUE-START -->
 <article class="issue" id="issue-2026-11-04">
   <div class="issue-head">
-    <h2>제2호 · 2026. 11. 4.(수)</h2>
-    <span class="period">대상 기간 2026.11.02 ~ 11.04 (주중 실행으로 3일치)</span>
+    <h2>제2호 · 2026. 11. 4.(수) <span class="tag">개정판</span></h2>
+    <span class="period">대상 기간 2026.10.26 ~ 11.04 (수요일 실행) · 기간 밖 항목은 날짜 표시</span>
   </div>
 
-  <p class="sum"><b>이번 주 한 줄:</b> 산업용 장비 <b>Siemens IoT2050</b>의 최고 위험도 취약점이 실제 공격에 쓰이고 있습니다. 폐쇄망 안의 <b>게이트웨이·엣지 장비</b>가 외부와 닿아 있는지 확인이 필요합니다.</p>
+  <p class="sum"><b>이번 주 한 줄:</b> 산업용 장비 <b>Siemens IoT2050</b>의 최고 위험도(CVSS 10.0) 취약점에 대한 실제 공격이 10.30.경부터 관측됐습니다. 폐쇄망 안 <b>엣지 장비</b>의 외부 접점 확인이 필요합니다.</p>
 
   <h3 class="hi">① 폐쇄망·공급망 위협</h3>
   <ul>
-    <li><span class="tag r">망분리</span><a href="https://cybersecuritynews.com/apt36-uses-usb/"><b>APT36, 이동식 드라이브로 폐쇄망 정부기관 침투 (날짜 미확인, 최근 몇 주 내 보도)</b></a> — 감염 USB로 백도어를 들여오는 방식입니다.
-      <span class="so">▶ 반입 USB는 전용 검사 PC를 거치고, 업무 외 용도 사용을 막아야 합니다.</span></li>
+    <li><span class="tag r">공급망</span><a href="https://thehackernews.com/2026/10/trezor-warns-of-suspected-hardware.html"><b>Trezor 지갑에서도 LTE 모듈 내장 의심 사례 (10.30.)</b></a> — Ledger에 이어 같은 판매처 제품입니다.
+      <span class="so">▶ 정품 인증을 통과한 기자재도 내부가 조작될 수 있습니다.</span></li>
+    <li><span class="tag r">망분리</span><a href="https://hackread.com/specter-usb-power-signals-air-gapped-pcs-leak-data/"><b>USB 전원 신호로 폐쇄망 PC 정보 유출 (고려대 연구, 10.24. · 대상 기간 밖)</b></a> — 폐쇄망 직접 관련이라 수록합니다.
+      <span class="so">▶ 제어구역 내 개인 휴대폰 충전을 제한해야 합니다.</span></li>
+    <li><span class="tag r">망분리</span><a href="https://cybersecuritynews.com/apt36-uses-usb/"><b>APT36, 이동식 드라이브로 폐쇄망 정부기관 침투 (날짜 미확인 · 원문 재확인 중)</b></a> — 감염 USB로 백도어를 들여오는 방식으로 보도됐습니다.
+      <span class="so">▶ 반입 USB는 전용 검사 PC를 거쳐야 합니다.</span></li>
   </ul>
 
   <div class="two">
     <div>
       <h3>② 사건·사고</h3>
       <ul>
-        <li><span class="tag r">제어장비</span><a href="https://thehackernews.com/2026/11/attackers-exploit-critical-siemens.html">Siemens SIMATIC IoT2050 최고 위험도 결함 악용 확인 (11.03.)</a> — 인증 없는 Node-RED 접속으로 백도어 설치</li>
+        <li><span class="tag r">제어장비</span><a href="https://thehackernews.com/2026/11/attackers-exploit-critical-siemens.html">Siemens SIMATIC IoT2050 최고 위험도 결함 악용 관측 (11.03. 보도)</a> — VulnCheck가 10.30. 기준 허니팟에서 Node-RED 경유 봇 설치·백도어 생성 시도를 확인했습니다.</li>
       </ul>
     </div>
     <div>
       <h3>③ 규제·정책</h3>
       <ul>
-        <li><span class="tag">국내</span><a href="https://www.mt.co.kr/economy/2026/09/17/2026091714272950509">한수원 사이버보안위원회 가동, AI 위협 대응 점검 (9.17., 이번 기간 외)</a></li>
-        <li><span class="tag">국내</span><a href="https://www.news1.kr/it-science/general-science/6318179">"AI 해킹, 원전도 대비해야" 원안위원장 "외부망과 완전 분리" (국감 보도, 날짜 미확인)</a></li>
+        <li><span class="tag r">국내</span><a href="https://www.m-economynews.com/news/article.html?no=71964">'27.4.부터 원전 표준설계·건설허가 신청자도 사이버보안 규제 대상 (국감 보도, 10.22. · 기간 밖)</a></li>
+        <li><span class="tag">국내</span><a href="https://www.news1.kr/it-science/general-science/6318179">"AI 해킹, 원전도 대비해야" 원안위원장 "외부망과 분리" (국감, 10.13. · 기간 밖)</a></li>
       </ul>
     </div>
   </div>
@@ -91,20 +95,25 @@ details.past summary { cursor: pointer; font-weight: 500; }
   <h3>④ 제어시스템 주요 취약점</h3>
   <div class="tbl"><table>
     <tr><th>제품</th><th>위험</th><th>조치</th></tr>
-    <tr><td><a href="https://thehackernews.com/2026/11/attackers-exploit-critical-siemens.html">Siemens SIMATIC IoT2050 Advanced (CVE-2026-58115)</a></td><td><span class="kev">악용 사례 있음</span> · CVSS 10.0</td><td>8월 Siemens 권고문대로 패치, 외부 노출 여부·Node-RED 흐름 점검</td></tr>
+    <tr><td><a href="https://thehackernews.com/2026/11/attackers-exploit-critical-siemens.html">Siemens SIMATIC IoT2050 Advanced (CVE-2026-58115)</a></td><td><span class="kev">공격 관측</span> · CVSS 10.0</td><td>4.3.4.1 이상으로 패치 또는 Node-RED 제거·보호, 외부 노출 점검</td></tr>
+    <tr><td><a href="https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02">Hitachi Energy TRO600 (CISA 10.29.)</a></td><td>높음 · CVSS 7.5 (v3.1)</td><td>9.2.2.1로 업데이트, 제어망 외부 노출 차단</td></tr>
+    <tr><td><a href="https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-03">Hitachi Energy CoreTec (CISA 10.29.)</a></td><td>높음 (CoreTec5 CVSS 8.8)</td><td>제품·버전별 권고 확인, 구형은 교체 검토</td></tr>
+    <tr><td><a href="https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02">Mitsubishi Electric ICONICS (CISA 10.29.)</a></td><td>CVE 4건</td><td>일부 제품은 패치 계획 없음, 완화책 적용</td></tr>
+    <tr><td><a href="https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01">EPICS Base (CISA 10.27.)</a></td><td>CVSS 9.8 · 공개 악용 미확인</td><td>7.0.11로 업데이트</td></tr>
   </table></div>
-  <p class="note">CISA 신규 ICS 권고문과 KEV 등재는 이번 조사에서 11월분을 확인하지 못했습니다(조사 중).</p>
+  <p class="note">CISA KEV 등재 여부는 이번 조사에서 확인하지 못했습니다(조사 중). 위 "공격 관측"은 보안업체 허니팟 관측 기준입니다.</p>
 
   <h3 class="hi">⑤ 이번 주 점검 제안</h3>
   <ul>
     <li><b>엣지·IoT 게이트웨이</b> — IoT2050 등 사용 여부와 외부망 연결 여부 확인</li>
-    <li><b>USB 반입</b> — 검사 PC 경유 절차와 기록 유지 여부 점검</li>
+    <li><b>USB·반입 기자재</b> — 검사 PC 경유 절차, 판매처·유통경로 확인</li>
     <li><b>망 분리 상태</b> — 제어망이 외부망과 실제로 분리되어 있는지 정기 확인</li>
   </ul>
 
   <p class="note">공개 보도·권고문을 Claude가 요약했습니다. 제목을 누르면 원문이 열리며, 인용·조치 전 원문 확인이 필요합니다. 일부 원문 사이트에 접근하지 못해 검색 결과 기준으로 작성했습니다.</p>
 </article>
 <!-- LATEST-ISSUE-END -->
+
 
 <section class="archive">
   <h2>지난 호</h2>
